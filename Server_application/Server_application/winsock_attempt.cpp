@@ -300,7 +300,7 @@ int main(void)
 			if (iResult > 0) {
 				printf("Bytes received: %d\n", iResult);
 
-				char response[] = "HTTP /1.1 200 Ok\r\nServer: Kpzee\r\nAllow: GET, HEAD, PUT\r\nContent-Language: en\r\nContent-Length: 300\r\nContent-Type: text/html; charset=UTF-8\r\nExpires: Thu, 07 Dec 2023 16:00:00 GMT\r\nLast-Modified: Tue, 15 Nov 1994 12:45:26 GMT\r\n\r\n<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><title>Test</title></head><body><h1>this is a Test</h1></body><html>";
+				char response[] = "HTTP /1.1 200 Ok\r\nServer: Kpzee\r\nAllow: GET, HEAD, PUT\r\nContent-Language: en\r\nContent-Length: 300\r\nContent-Type: text/html; charset=UTF-8\r\nExpires: Thu, 07 Dec 2023 16:00:00 GMT\r\nLast-Modified: Tue, 15 Nov 1994 12:45:26 GMT\r\n\r\n<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><title>Test</title></head><body><h1>this is a Test</h1></body></html>";
 
 				iSendResult = send(ClientSocket, response, iResult, 0);
 				if (iSendResult == SOCKET_ERROR) {
